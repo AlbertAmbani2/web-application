@@ -1,0 +1,356 @@
+* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body {
+    background:#262a2f;
+    color: #fff; /* Set text color to white */
+
+  }
+
+  /* Sidebar styles */
+  .sidebar {
+    background-color: #262a2f;
+    width: 50px;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: width 0.2s ease-in-out; /* Add a transition for smooth animation */
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+/* Adjusting the styles for the profile icon */
+.profile i {
+  font-size: 40px; /* Set the desired size for the profile icon */
+  color: #fff; /* Set the desired color for the profile icon */
+  padding: 10px; /* Add some padding around the icon for better appearance */
+  cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+  position: absolute; /* Position the icon absolutely over the sidebar */
+  top: 20px;
+  left: 20px;
+  z-index: 1; /* Set a higher z-index to make sure it floats over the sidebar content */
+}
+
+/* Add a new class for the minimized sidebar */
+.sidebar.sidebar-minimized {
+  width: 60px; /* Set the width of the minimized sidebar */
+}
+
+
+/* Add styles to the sidebar content to make room for the floating profile icon */
+.sidebar.sidebar-minimized .profile {
+  justify-content: center; /* Center the profile icon when sidebar is minimized */
+}
+
+.sidebar.sidebar-minimized .nav-links {
+  display: none; /* Hide the navigation links when sidebar is minimized */
+}
+
+.sidebar.sidebar-minimized .nav-links a {
+  display: none; /* Hide the navigation link text when sidebar is minimized */
+}
+
+.sidebar.sidebar-minimized .nav-links a i {
+  font-size: 24px; /* Adjust the font size of the navigation link icons when minimized */
+}
+
+/* Adjust the styles for the profile icon when sidebar is minimized */
+.sidebar.sidebar-minimized .profile i {
+  font-size: 30px;
+  padding: 20px;
+}
+
+/* Style for the app content section */
+.appbox {
+  padding: 20px;
+   /* Add a margin to the app content to make room for the sidebar */
+  transition: margin-left 0.2s ease-in-out; /* Add a transition for smooth animation */
+}
+
+/* Adjust the app content margin when the sidebar is minimized */
+.appbox.sidebar-minimized {
+  margin-left: 60px; /* Set the new margin when the sidebar is minimized */
+}
+
+  .profile h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1da1f2;
+  }
+
+ /* .profile p {
+    font-size: 14px;
+    color: #657786;
+    
+  }   */
+  #profileIcon {
+    font-size: 36px;
+    margin-right: 10px;
+  }
+  .details h3 {
+    margin: 0; /* Remove default margin to avoid extra spacing */
+  }
+  
+  .details p {
+    margin: 0; /* Remove default margin to avoid extra spacing */
+  }
+  .details hr {
+    width: 75px;
+    margin-top: 10px;
+    }
+  .details {
+    display: flex;
+    flex-direction: column; /* Set the details container to use Flexbox in a column layout */
+    margin-top: 55px;
+  }
+
+  
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    color: #1da1f2;
+    text-decoration: none;
+  }
+
+  .nav-links a:hover {
+    background-color: #f5f8fa;
+    border-radius: 6px;
+  }
+
+  
+/* New styles for the sidebar minimization */
+.sidebar.sidebar-minimized {
+  width: 80px; /* Reduce the width of the sidebar when minimized */
+  transition: width 0.3s ease-in-out; /* Add transition for smooth animation */
+}
+
+.sidebar.sidebar-minimized .profile {
+  justify-content: center; /* Center the profile icon when sidebar is minimized */
+}
+
+.sidebar.sidebar-minimized .nav-links {
+  display: none; /* Hide the navigation links when sidebar is minimized */
+}
+
+.sidebar.sidebar-minimized .nav-links a {
+  display: none; /* Hide the navigation link text when sidebar is minimized */
+}
+
+.sidebar.sidebar-minimized .nav-links a i {
+  font-size: 24px; /* Adjust the font size of the navigation link icons when minimized */
+}
+
+.sidebar.sidebar-minimized .nav-links a:hover {
+  background-color: transparent; /* Remove background color on hover when minimized */
+}
+
+/* Adjust the styles for the profile icon when sidebar is minimized */
+.sidebar.sidebar-minimized .profile i {
+  font-size: 30px;
+  padding: 20px;
+}
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+   .registerloginbox {
+    background: #fff;
+    padding: 30px 120px;
+    width: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   }
+
+   .registerloginbox button {
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    border-radius: 10px;
+    background: #359cf0;
+    color: white;
+    border: none;
+    font-weight: 500;
+  }
+
+  .registerloginbox input{
+    width: 100%;
+    background: transparent;
+    border: 1p solid #999;
+    outline: 0;
+    padding: 15px 10px;
+    border-radius: 4px;
+    margin: 10px;
+    color: #333; /* Set input text color to dark */
+
+  }
+
+  ::placeholder{
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .registerloginbox p{
+    text-align: left;
+    font-size: 14px;
+    color: #555;
+    margin: 40px 0 50px;
+  }
+
+  .registerloginbox p a{
+    text-decoration: none;
+    color: #359cf0;
+  }
+  
+  /* Style for the app content section */
+.appbox {
+  display: none;
+  padding: 20px;
+}
+
+.appbox .profile-card {
+  padding: 20px;
+  text-align: center;
+}
+
+.appbox .profile-card i {
+  font-size: 80px;
+  color: #1da1f2
+
+}  
+
+.appbox .profile-card h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.appbox .profile-card p {
+  font-size: 14px;
+  color: #657786; /* gray text color */
+  margin-bottom: 10px;
+}
+
+.appbox .profile-card button {
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: #359cf0;
+  color: white;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Style for the tab buttons and tab content */
+  #tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #4065eb;
+    border: 1px solid #ccc;
+    margin: 0 5px;
+    border-radius: 5px;
+    color: #fff;
+
+  }
+  
+  .tab.active {
+    background-color: #cccccc;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  #myPostsTab {
+    display: block;
+    margin-top: 40px;
+  }
+  
+  /* Style for the like and comment buttons */
+.like-button,
+.comment-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #657786;
+  background-color: transparent;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.like-button:hover,
+.comment-button:hover {
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.like-button i,
+.comment-button i {
+  font-size: 16px;
+}
+
+.like-button.active {
+  color: #e0245e; /* Change the color when the button is active (liked) */
+}
+
+/* Style for the comments section */
+.comments {
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.comments div {
+  padding: 5px;
+  background-color: rgba(29, 161, 242, 0.1);
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.post .post-actions{
+  display: flex;
+}

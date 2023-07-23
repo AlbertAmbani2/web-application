@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web-app</title>
+
+    <script src="https://kit.fontawesome.com/056bf81583.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar" id="profileBox">
+    <!-- Sidebar content goes here -->
+    <div  class="profile">
+      <i id="profileIcon" class="fas fa-user-circle"></i>
+     
+    </div>
+    
+    <nav class="nav-links" id="sidebarcontent">
+      <div class="details">
+        <h3>Name</h3>
+        <p>Username</p>
+        <hr>
+        </div> 
+      <a href="/profile.html">Profile</a>
+      <a href="/notifications">Notifications</a>
+      <a id="logoutBtn" href="#"  onclick="logoutUser()">Logout</a> 
+    </nav>
+</aside>
+    
+
+    <!--user registration-->
+    <div id="registrationFormContainer" class="registerloginbox">
+        
+        <h2>User Registration</h2>
+        <form id="registerForm">
+          <input type="text" id="regUsername" placeholder="Enter username" required>
+          <input type="password" id="regPassword" placeholder="Enter password" required>
+          <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+
+      </div>
+
+      <!--Login form-->
+
+      <div id="loginFormContainer" class="registerloginbox" style="display: none;">
+        <h2>User Login</h2>
+        <form id="loginForm">
+          <input type="text" id="loginUsername" placeholder="Enter username" required>
+          <input type="password" id="loginPassword" placeholder="Enter password" required>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+
+       
+
+      <!--User profile--> 
+      <div id="app" class="appbox" style="display: none;">
+        <h1>web-app</h1>
+
+        <!-- The main app content will be displayed here -->
+        <div id="tabs">
+          <button class="tab" onclick="switchTab('myPosts')">Feed</button>
+          <button class="tab" onclick="switchTab('following')">Following</button>
+        </div>
+
+        <div id="feedTab" class="tab-content" style="display: none;">
+          <h2>Feed</h2>
+          <div id="feedPosts">
+            <!-- Posts from friends I'm following will be displayed here -->
+          </div>
+
+        <div id="followingTab" class="tab-content" style="display: none;">
+          <h2>Following</h2>
+          <div id="followingPosts">
+            <!-- Posts from friends I'm following will be displayed here -->
+          </div>
+        </div>
+        <!-- Upgrade to Premium Button -->
+        <div id="premiumButtonContainer" style="display: none;">
+          <button id="premiumButton" onclick="upgradeToPremium()">Upgrade to Premium</button>
+        </div>
+      </div>
+
+      
+      <script src="/profile.js" type="module"></script>
+      <script src="script.js" defer></script>
+</body>
+</html>

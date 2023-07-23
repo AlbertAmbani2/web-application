@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <script src="https://kit.fontawesome.com/056bf81583.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+       <!--User profile-->
+       
+        <div id="userProfile">
+            <!-- User profile section -->
+          <div class="profile-card">
+            <i class="fas fa-user-circle"></i> 
+            <h2 id="name"></h2>
+            <p id="username"></p>
+            <p id="email"></p>
+            <p id="website"></p>
+        <!-- <button id="logoutBtn">Logout</button>  Add the logout button here -->
+          </div>
+       
+          
+        <!--home page starts here-->
+  
+          
+  
+          <!--Creating a new post-->
+          <div id="myPostsTab" class="tab-content">
+             
+            <!--my posts-->
+            <h2>My Posts</h2>
+            <div id="myPosts" class="post">
+              <!-- My posts will be displayed here -->
+              <!-- Example post -->           
+                <p>Post content goes here</p>
+                <div class="post-actions">
+                  <!-- Like button -->
+                  <button class="like-button"><i class="far fa-heart"></i></button>
+                  <!-- Comment button -->
+                  <button class="comment-button"><i class="far fa-comment"></i> </button>
+                </div>
+                <form class="comment-form">
+                  <input type="text" class="comment-input" placeholder="Add a comment">
+                  <button type="submit" class="comment-button">Post</button>
+                </form>
+                <div class="comments">
+                  <!-- Comments will be added here dynamically -->
+                  <!-- Example:
+                  <div>Comment 1</div>
+                  <div>Comment 2</div>
+                  -->
+                </div>
+                <hr>            
+
+             
+            </div>
+          </div>
+      </div>
+       
+
+    <script src="/profile.js" type="module"></script>
+</body>
+</html>
